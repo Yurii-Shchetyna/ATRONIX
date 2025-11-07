@@ -11,6 +11,7 @@ window.addEventListener('scroll', () => {
 
 const burgerBtn = document.querySelector('.burger');
 const burgerMenu = document.getElementById('burgerMenu');
+const navLinks = document.querySelectorAll('.burger-menu a');
 
 burgerBtn?.addEventListener('click', () => {
 	if (!burgerMenu.classList.contains('visible')) {
@@ -24,6 +25,13 @@ burgerBtn?.addEventListener('click', () => {
 	}
 });
 
+navLinks.forEach(link => {
+	link.addEventListener('click', () => {
+		burgerBtn.classList.remove('active');
+		burgerMenu.classList.remove('visible');
+		document.body.style.overflow = 'visible';
+	});
+});
 /*
 // Carousels
 
@@ -95,10 +103,13 @@ function prodsReveal() {
 		const winCenter = window.innerHeight / 2;
 		const rect = prod.getBoundingClientRect();
 		const prodCenter = rect.top + rect.height / 2;
+		const blockBtn = prod.parentElement.querySelector('.blBtn')
 		if (prodCenter <= winCenter * 1.9 && prodCenter * 1.3 > winCenter * 0.4) {
 			prod.classList.add('show');
+			blockBtn.classList.add('show');
 		} else {
 			prod.classList.remove('show');
+			blockBtn.classList.remove('show');
 		}
 
 	});
@@ -115,13 +126,9 @@ window.addEventListener('scroll', () => {
 	about.forEach((block, i) => {
 		const rect = block.getBoundingClientRect();
 		const next = about[i + 1];
-
-		if (rect.top < 105) {
-			block.classList.add('sticky-about');
-		}
 		if (next) {
 			const rectNext = next.getBoundingClientRect();
-			const overlap = 105 + rect.height * 0.7 - rectNext.top;
+			const overlap = 105 + rect.height * 0.65 - rectNext.top;
 			if (overlap > 0) {
 				block.style.opacity = Math.max(1 - overlap / 300, 0);
 			} else {
@@ -130,3 +137,83 @@ window.addEventListener('scroll', () => {
 		}
 	});
 });
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		const block = entry.target;
+		if (entry.boundingClientRect.top > 105 && entry.isIntersecting) {
+			block.classList.add('sticky-about');
+		} else if (entry.boundingClientRect.top >= 105) {
+			block.classList.remove('sticky-about');
+		}
+	});
+}, {
+	threshold: [0],
+	rootMargin: '-105px 0px 0px 0px'
+});
+
+about.forEach(block => observer.observe(block));
+
+const obsCarousel = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		const block = entry.target;
+		const carousel = block.querySelector('.carousel');
+		if(!carousel)return;
+		let scrollIndex = 0;
+		const blocks = carousel.querySelectorAll('.carousel-blocks');
+		const total = blocks.length;
+		if (!carousel._intervalId) carousel._intervalId = null;
+
+		function scrollNextBlock() {
+			scrollIndex++;
+			if (scrollIndex >= total) scrollIndex = 0;
+			const nextBlock = blocks[scrollIndex];
+			carousel.scrollTo({
+				left: nextBlock.offsetLeft - carousel.offsetLeft,
+				behavior: 'smooth'
+			});
+		}
+
+		if (block.classList.contains('sticky-about')) {
+			if(!carousel._intervalId){
+				carousel._intervalId = setInterval(scrollNextBlock, 2500);
+			}
+		} else {
+			if (carousel._intervalId) {
+				clearInterval(carousel._intervalId);
+				carousel._intervalId = null;
+			}
+		}
+	});
+}, { threshold: [0] });
+
+about.forEach(block =>
+	obsCarousel.observe(block));
+
+/*
+
+const carousel2 = document.getElementById('carousel2');
+let scrollIndex2 = 0;
+const blocksC2 = document.querySelectorAll('.team');
+const total2 = blocksC2.length;
+let setCarousel2;
+
+function scrollNextBlock() {
+  scrollIndex2++;
+  if (scrollIndex2 >= total2) scrollIndex2 = 0;
+
+  const nextBlock = blocksC2[scrollIndex2];
+  carousel2.scrollTo({
+    left: nextBlock.offsetLeft - carousel2.offsetLeft, // позиція відносно контейнера
+    behavior: 'smooth'
+  });
+}
+
+function startCarousel2() {
+  if (!setCarousel2 && window.scrollY > 300) {
+    setCarousel2 = setInterval(scrollNextBlock, 3000);
+    window.removeEventListener('scroll', startCarousel2);
+  }
+}
+
+*/

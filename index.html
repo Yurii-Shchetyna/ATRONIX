@@ -12,7 +12,7 @@
 
 	<div class="video-bg">
 		<video autoplay muted loop playsinline>
-			<source src="./images/hero.mov" type="video/quicktime">
+			<source src="./images/hero.mp4" type="video/mp4">
 		</video>
 	</div>
 
@@ -32,13 +32,13 @@
 
 		<div class="content">
 
-			<section class="hero">
+			<section class="hero" id="hero">
 
 				<div class="hero-content">
 
 					<h2>New items arrived!</h2>
 
-					<a href="#" class="btn">
+					<a href="#" class="btn hero-btn">
 						See more
 					</a>
 				</div>
@@ -47,61 +47,73 @@
 
 			<img src="./images/plata.jpg" class="bg">
 
-			<section class="products">
+			<section class="products" id="products">
 
 				<h1 class="title">Our Products</h1>
 
 				<div class="prods">
 
-					<div class="block">
-						<img src="./images/cp.jpg" width="80%" class="prodsImg">
-						<h4>CPU</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/cp.jpg" width="80%" class="prodsImg">
+							<h4>CPU</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 
-					<div class="block">
-						<img src="./images/gpu.jpg" width="80%" class="prodsImg">
-						<h4>GPU</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/gpu.jpg" width="80%" class="prodsImg">
+							<h4>GPU</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 
-					<div class="block">
-						<img src="./images/ram.jpg" width="80%" class="prodsImg">
-						<h4>RAM</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/ram.jpg" width="80%" class="prodsImg">
+							<h4>RAM</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 
-					<div class="block">
-						<img src="./images/motherboard.jpg" width="80%" class="prodsImg">
-						<h4>Motherboards</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/motherboard.jpg" width="80%" class="prodsImg">
+							<h4>Motherboards</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 
-					<div class="block">
-						<img src="./images/water.jpg" width="80%" class="prodsImg">
-						<h4>Liquid cooling systems</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/water.jpg" width="80%" class="prodsImg">
+							<h4>Liquid cooling systems</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 
-					<div class="block">
-						<img src="./images/pc.jpg" width="80%" class="prodsImg">
-						<h4>Setups</h4>
-						<a href="#" class="btn">See more</a>
+					<div class="blocks">
+						<div class="block">
+							<img src="./images/pc.jpg" width="80%" class="prodsImg">
+							<h4>Setups</h4>
+						</div>
+						<a href="#" class="btn blBtn">See more</a>
 					</div>
 			</section>
-			<section class="about-us">
+			<section class="about-us" id="about">
 
 				<h1 class="title">About us</h1>
 
 				<div class="info about">
 					<h3>We are awesome</h3>
 					<p>We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.</p>
-					<div id="carousel">
+					<div class="carousel">
 
-						<img src="./images/office1.jpg" class="officeImg">
-						<img src="./images/office2.jpg" class="officeImg">
-						<img src="./images/office3.jpg" class="officeImg">
-						<img src="./images/office4.jpg" class="officeImg">
+						<img src="./images/office1.jpg" class="officeImg carousel-blocks">
+						<img src="./images/office2.jpg" class="officeImg carousel-blocks">
+						<img src="./images/office3.jpg" class="officeImg carousel-blocks">
+						<img src="./images/office4.jpg" class="officeImg carousel-blocks">
 					</div>
 				</div>
 				<div class="info about">
@@ -110,24 +122,24 @@
 						We passed through Covid-19,
 						and now working even despite
 						the rusian aggresion</p>
-					<div id="carousel2">
+					<div class="carousel">
 
-						<div class="team">
+						<div class="team carousel-blocks">
 							<img src="./images/face1.jpg" class="faceImg">
 							<h3>Robert Zemekis</h3>
 						</div>
 
-						<div class="team">
+						<div class="team carousel-blocks">
 							<img src="./images/face2.jpg" class="faceImg">
 							<h3>Salma Haiek</h3>
 						</div>
 
-						<div class="team">
+						<div class="team carousel-blocks">
 							<img src="./images/face3.jpg" class="faceImg">
 							<h3>Bob Dylan</h3>
 						</div>
 
-						<div class="team">
+						<div class="team carousel-blocks">
 							<img src="./images/face4.jpg" class="faceImg">
 							<h3>Nina Kravitz</h3>
 						</div>
@@ -139,37 +151,63 @@
 					<p>We are passionate about quality, innovation, and reliability. Every component we offer is carefully selected to help you build, upgrade, and optimize your PC with confidence. Honesty, cutting-edge technology, and customer satisfaction guide everything we do.
 					</p>
 				</div>
-
 			</section>
-		</div>
+			<section class="contacts" id="contacts">
+				<h1 class="title">Contact Us</h1>
+				<div class="contacts-content">
+
+					<div class="contact-info info contact">
+						<h3>Get in Touch</h3>
+						<p><strong>Address:</strong> 123 Main Street, Kyiv, Ukraine</p>
+						<p><strong>Email:</strong> info@example.com</p>
+						<p><strong>Phone:</strong> +380 12 345 6789</p>
+
+						<div class="socials">
+							<a href="#" aria-label="Facebook"><img src="./images/facebook.png" width="30px"></a>
+							<a href="https://www.instagram.com/creamchansky?igsh=MXBlMjRrdmJrdGc5OQ%3D%3D&utm_source=qr" aria-label="Instagram"><img src="./images/instagram.png" width="30px"></a>
+							<a href="#" aria-label="LinkedIn"><img src="./images/linkedin.png" width="30px"></a>
+						</div>
+					</div>
+					<div class="contact-form info contact">
+
+						<h3>Send Us a Message</h3>
+						<form action="#" method="POST">
+							<input type="text" name="name" placeholder="Your Name" required>
+							<input type="email" name="email" placeholder="Your Email" required>
+							<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+							<button type="submit" class="btn">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</section>
 		</div>
 	</main>
 
 	<div id="burgerMenu">
 		<nav class="burger-menu">
 			<ul>
-				<li><a href="#">Main</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contacts</a></li>
+				<li><a href="#hero">Main</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#about">About Us</a></li>
+				<li><a href="#contacts">Contacts</a></li>
 			</ul>
 		</nav>
 	</div>
 
 	<footer class="container footer">
-		<div class="footer-content">
-			<a href="#" class="logo">Logo</a>
+		<div class="footer-content container">
+			<a href="#" class="logo"><img src="./images/ATRONIX.svg" width="140px"></a>
 			<nav class="footer-nav">
 				<ul>
-					<li><a href="#">Main</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Contacts</a></li>
+					<li><a href="#hero">Main</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#contacts">Contacts</a></li>
 				</ul>
 			</nav>
 			<div class="socials">
 				<a href="#" aria-label="Facebook"><img src="./images/facebook.png" width="30px"></a>
-				<a href="#" aria-label="Instagram"><img src="./images/instagram.png" width="30px"></a>
+				<a href="https://www.instagram.com/creamchansky?igsh=MXBlMjRrdmJrdGc5OQ%3D%3D&utm_source=qr" aria-label="Instagram"><img src="./images/instagram.png" width="30px"></a>
 				<a href="#" aria-label="LinkedIn"><img src="./images/linkedin.png" width="30px"></a>
 			</div>
 		</div>
