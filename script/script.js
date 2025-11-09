@@ -128,7 +128,7 @@ window.addEventListener('scroll', () => {
 		const next = about[i + 1];
 		if (next) {
 			const rectNext = next.getBoundingClientRect();
-			const overlap = 105 + rect.height * 0.65 - rectNext.top;
+			const overlap = 120 + rect.height * 0.65 - rectNext.top;
 			if (overlap > 0) {
 				block.style.opacity = Math.max(1 - overlap / 300, 0);
 			} else {
@@ -141,9 +141,9 @@ window.addEventListener('scroll', () => {
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		const block = entry.target;
-		if (entry.boundingClientRect.top > 105 && entry.isIntersecting) {
+		if (entry.boundingClientRect.top > 120 && entry.isIntersecting) {
 			block.classList.add('sticky-about');
-		} else if (entry.boundingClientRect.top >= 105) {
+		} else if (entry.boundingClientRect.top >= 120) {
 			block.classList.remove('sticky-about');
 		}
 	});

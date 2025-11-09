@@ -10,12 +10,6 @@
 
 <body>
 
-	<div class="video-bg">
-		<video autoplay muted loop playsinline>
-			<source src="./images/hero.mp4" type="video/mp4">
-		</video>
-	</div>
-
 	<section class="head">
 		<header class="container header">
 			<div class="space"></div>
@@ -25,14 +19,31 @@
 				<div class="burLine2"></div>
 				<div class="burLine3"></div>
 			</button>
+			<nav class="nav-menu">
+				<ul>
+					<li><a href="#hero">Main</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#contacts">Contacts</a></li>
+				</ul>
+			</nav>
 		</header>
 	</section>
 
 	<main class="container">
 
-		<div class="content">
+	<div class="bg-dark">
+		<img src="./images/plata.jpg" class="bg">
+	</div>
 
+		<div class="content">
 			<section class="hero" id="hero">
+
+				<div class="video-bg">
+					<video autoplay muted loop playsinline>
+						<source src="./images/hero.mp4" type="video/mp4">
+					</video>
+				</div>
 
 				<div class="hero-content">
 
@@ -44,9 +55,6 @@
 				</div>
 
 			</section>
-
-			<img src="./images/plata.jpg" class="bg">
-
 			<section class="products" id="products">
 
 				<h1 class="title">Our Products</h1>
@@ -88,7 +96,7 @@
 					<div class="blocks">
 						<div class="block">
 							<img src="./images/water.jpg" width="80%" class="prodsImg">
-							<h4>Liquid cooling systems</h4>
+							<h4>LCS</h4>
 						</div>
 						<a href="#" class="btn blBtn">See more</a>
 					</div>
@@ -101,55 +109,57 @@
 						<a href="#" class="btn blBtn">See more</a>
 					</div>
 			</section>
-			<section class="about-us" id="about">
+			<section class="section-about" id="about">
 
 				<h1 class="title">About us</h1>
+				
+				<div class="about-us">
+					<div class="info about">
+						<h3>We are awesome</h3>
+						<p>We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.</p>
+						<div class="carousel">
 
-				<div class="info about">
-					<h3>We are awesome</h3>
-					<p>We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.We are awesome because we are united. We are always together. We are working hard and sucsesfull.</p>
-					<div class="carousel">
-
-						<img src="./images/office1.jpg" class="officeImg carousel-blocks">
-						<img src="./images/office2.jpg" class="officeImg carousel-blocks">
-						<img src="./images/office3.jpg" class="officeImg carousel-blocks">
-						<img src="./images/office4.jpg" class="officeImg carousel-blocks">
-					</div>
-				</div>
-				<div class="info about">
-					<h3>We are 7 years old</h3>
-					<p>In 2018 me, Robert Zemekis, and my friends founded this company. And we are working together since that time.
-						We passed through Covid-19,
-						and now working even despite
-						the rusian aggresion</p>
-					<div class="carousel">
-
-						<div class="team carousel-blocks">
-							<img src="./images/face1.jpg" class="faceImg">
-							<h3>Robert Zemekis</h3>
-						</div>
-
-						<div class="team carousel-blocks">
-							<img src="./images/face2.jpg" class="faceImg">
-							<h3>Salma Haiek</h3>
-						</div>
-
-						<div class="team carousel-blocks">
-							<img src="./images/face3.jpg" class="faceImg">
-							<h3>Bob Dylan</h3>
-						</div>
-
-						<div class="team carousel-blocks">
-							<img src="./images/face4.jpg" class="faceImg">
-							<h3>Nina Kravitz</h3>
+							<img src="./images/office1.jpg" class="officeImg carousel-blocks">
+							<img src="./images/office2.jpg" class="officeImg carousel-blocks">
+							<img src="./images/office3.jpg" class="officeImg carousel-blocks">
+							<img src="./images/office4.jpg" class="officeImg carousel-blocks">
 						</div>
 					</div>
+					<div class="info about">
+						<h3>We are 7 years old</h3>
+						<p>In 2018 me, Robert Zemekis, and my friends founded this company. And we are working together since that time.
+							We passed through Covid-19,
+							and now working even despite
+							the rusian aggresion</p>
+						<div class="carousel">
 
-				</div>
-				<div class="info about">
-					<h3>Our values</h3>
-					<p>We are passionate about quality, innovation, and reliability. Every component we offer is carefully selected to help you build, upgrade, and optimize your PC with confidence. Honesty, cutting-edge technology, and customer satisfaction guide everything we do.
-					</p>
+							<div class="team carousel-blocks">
+								<img src="./images/face1.jpg" class="faceImg">
+								<h3>Robert Zemekis</h3>
+							</div>
+
+							<div class="team carousel-blocks">
+								<img src="./images/face2.jpg" class="faceImg">
+								<h3>Salma Haiek</h3>
+							</div>
+
+							<div class="team carousel-blocks">
+								<img src="./images/face3.jpg" class="faceImg">
+								<h3>Bob Dylan</h3>
+							</div>
+
+							<div class="team carousel-blocks">
+								<img src="./images/face4.jpg" class="faceImg">
+								<h3>Nina Kravitz</h3>
+							</div>
+						</div>
+
+					</div>
+					<div class="info about">
+						<h3>Our values</h3>
+						<p>We are passionate about quality, innovation, and reliability. Every component we offer is carefully selected to help you build, upgrade, and optimize your PC with confidence. Honesty, cutting-edge technology, and customer satisfaction guide everything we do.
+						</p>
+					</div>
 				</div>
 			</section>
 			<section class="contacts" id="contacts">
@@ -158,9 +168,9 @@
 
 					<div class="contact-info info contact">
 						<h3>Get in Touch</h3>
-						<p><strong>Address:</strong> 123 Main Street, Kyiv, Ukraine</p>
-						<p><strong>Email:</strong> info@example.com</p>
-						<p><strong>Phone:</strong> +380 12 345 6789</p>
+						<p>Address: <a href="https://maps.app.goo.gl/UAdcKF2YvZi9t7fR8">123 Main Street, Kyiv, Ukraine</a></p>
+						<p>Email: <a href="mailTo:info@example.com">info@example.com</a></p>
+						<p>Phone: <a href="tel:+380 12 345 6789">+380 12 345 6789</a></p>
 
 						<div class="socials">
 							<a href="#" aria-label="Facebook"><img src="./images/facebook.png" width="30px"></a>
@@ -212,7 +222,7 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<p>© 2025 Logo. All rights reserved.</p>
+			<p>© 2025 <a href="#hero"><img src="./images/ATRONIX.svg" width="72px"></a>. All rights reserved.</p>
 			<p>Made with ❤️ in Ukraine.</p>
 		</div>
 
